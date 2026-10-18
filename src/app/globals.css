@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand */
+  --color-petrol: #1f4e5f; /* links, buttons, accents */
+  --color-petrol-dark: #163a47; /* hover */
+  --color-petrol-shadow: #0f2c36; /* button bottom edge */
+  --color-petrol-deep: #12313c; /* dark research band */
+
+  /* Text */
+  --color-ink: #0b0c0c; /* main text */
+  --color-muted: #3d4245; /* secondary text */
+
+  /* Surfaces */
+  --color-page: #f7f7f5; /* page background */
+  --color-surface: #ffffff; /* header, footer, cards */
+  --color-line: #d8dad3; /* card borders and dividers */
+
+  /* States */
+  --color-focus: #ffdd00; /* keyboard focus */
+  --color-notice-bg: #fff4d6; /* "In progress" tag */
+  --color-notice-text: #5c4300;
+
+  /* Fonts */
+  --font-sans: var(--font-atkinson), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid transparent;
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  box-shadow:
+    0 -2px #ffdd00,
+    0 4px #0b0c0c;
+  text-decoration: none;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 0.5rem;
+  padding: 0.75rem 1rem;
+  z-index: 50;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
