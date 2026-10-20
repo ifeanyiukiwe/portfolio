@@ -101,10 +101,10 @@ export default function Home() {
             I build web applications that everyone can use.
           </h1>
           <p className="text-xl text-muted max-w-2xl">
-            Over five years building React and TypeScript interfaces in an Agile
-            team, an MSc in Computing from the University of Sunderland, and
-            research into how accessibility reports help developers fix real
-            problems.
+            Over five years building React and TypeScript interfaces, most of
+            them in an Agile team, an MSc in Computing from the University of
+            Sunderland, and research into how accessibility reports help
+            developers fix real problems.
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
             <Link
@@ -116,7 +116,7 @@ export default function Home() {
             <a
               href="/cv.pdf"
               download
-              className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-page"
+              className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
             >
               Download my CV (PDF, 66 KB)
             </a>
@@ -270,6 +270,72 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+      <section
+        aria-labelledby="research-h"
+        className="bg-petrol-deep text-white"
+      >
+        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-wrap gap-10 items-start">
+          <div className="flex-1 basis-[420px] flex flex-col gap-4">
+            <p className="font-mono text-sm tracking-wide text-[#cde5e4]">
+              MSC RESEARCH
+            </p>
+            <h2 id="research-h" className="text-4xl font-bold leading-tight">
+              Do accessibility reports actually help developers fix things?
+            </h2>
+          </div>
+          <div className="flex-1 basis-[420px] flex flex-col gap-4">
+            <p className="text-[#e9f2f1] text-lg leading-relaxed">
+              For my dissertation I ran a controlled experiment with 35
+              developers, testing how different report formats affect which
+              accessibility problems get fixed. The paper is being prepared for
+              publication.
+            </p>
+            <Link
+              href="/about#research"
+              className="font-bold underline text-white self-start hover:text-[#cde5e4]"
+            >
+              More about my research
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section id="contact" aria-labelledby="contact-h">
+        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-6">
+          <h2 id="contact-h" className="text-4xl font-bold">
+            Get in touch
+          </h2>
+          <p className="text-xl text-muted max-w-2xl leading-relaxed">
+            I’m looking for a developer role in a team that cares about building
+            for everyone. The quickest way to reach me is by email.
+          </p>
+          <ul className="flex flex-wrap gap-4">
+            <li>
+              <a
+                href="mailto:duio1541@gmail.com"
+                className="inline-flex items-center min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"
+              >
+                Email me
+              </a>
+            </li>
+            <li>
+              <ExternalLink
+                href="https://www.linkedin.com/in/ifeanyiukiwe"
+                className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
+              >
+                LinkedIn
+              </ExternalLink>
+            </li>
+            <li>
+              <ExternalLink
+                href="https://github.com/ifeanyiukiwe"
+                className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
+              >
+                GitHub
+              </ExternalLink>
+            </li>
+          </ul>
         </div>
       </section>
     </>
