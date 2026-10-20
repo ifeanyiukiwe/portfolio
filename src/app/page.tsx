@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import ExternalLink from "@/components/ExternalLink";
+import { Truck } from "lucide-react";
 export default function Home() {
   const stack = [
     {
@@ -9,7 +12,7 @@ export default function Home() {
         "Next.js",
         "JavaScript",
         "HTML and CSS",
-        "Bootstrap CSS",
+        "Bootstrap",
         "Tailwind CSS",
       ],
     },
@@ -46,6 +49,47 @@ export default function Home() {
       ],
     },
   ];
+  const featured = [
+    {
+      title: "WebAudit",
+      tech: "PHP 8.2 · MySQL · JavaScript · Chart.js",
+      description:
+        "An accessibility auditing tool that checks a page against WCAG 2.1 AA, explains each issue with a fix, and tracks scores over time. It became the basis of my dissertation.",
+      image: "/images/dashboard.png",
+      alt: "WebAudit dashboard showing three audits, an average score of 63 and a score trend rising from 0 to 100",
+      caseStudy: "/projects#webaudit",
+      github: "https://github.com/ifeanyiukiwe/webaudit",
+    },
+    {
+      title: "Gaming e-commerce platform",
+      tech: "PHP · MySQL · JavaScript · HTML · CSS",
+      description:
+        "My highest-scoring MSc project: a full PHP shop with secure login, product search, cart, checkout and an admin dashboard for orders.",
+      image: "/images/ecommerce.png",
+      alt: "Gaming e-commerce shop home page showing a grid of games with prices, a search bar and a cart button",
+      caseStudy: "/projects#ecommerce",
+      github: "https://github.com/ifeanyiukiwe/msc-ecommerce",
+    },
+    {
+      title: "Infinisculpt",
+      tech: "React · Node.js · Express · MongoDB",
+      description:
+        "A booking platform I built and launched for a local beauty business: a five-step booking journey, a REST API that checks for overlapping appointments, and a secure admin area.",
+      image: "/images/infinisculpt.png",
+      alt: "Infinisculpt booking page showing beauty treatments with prices and a button to choose a date and time",
+      caseStudy: "/projects#infinisculpt",
+      liveSite: "https://infinisculpt.com",
+    },
+    {
+      title: "Foodash",
+      tech: "Next.js · TypeScript · Tailwind · Jest · GitHub Actions",
+      description:
+        "A delivery app for local corner shops, built the way a team would: planned on a Jira board, with unit tests and a CI pipeline from day one.",
+      caseStudy: "/projects#foodash",
+      github: "https://github.com/ifeanyiukiwe/fooddash",
+      inProgress: true,
+    },
+  ];
   return (
     <>
       <section className="bg-surface border-b border-line">
@@ -57,7 +101,7 @@ export default function Home() {
             I build web applications that everyone can use.
           </h1>
           <p className="text-xl text-muted max-w-2xl">
-            Five years building React and TypeScript interfaces in an Agile
+            Over five years building React and TypeScript interfaces in an Agile
             team, an MSc in Computing from the University of Sunderland, and
             research into how accessibility reports help developers fix real
             problems.
@@ -108,7 +152,7 @@ export default function Home() {
                   </p>
                   <p>
                     building web applications with React and TypeScript
-                    including almost five years in a commercial Agile Team
+                    including almost five years in a commercial Agile team
                   </p>
                 </li>
                 <li className="border-t border-white/30 pt-6">
@@ -117,7 +161,7 @@ export default function Home() {
                 </li>
                 <li className="border-t border-white/30 pt-6">
                   <p className="text-xl font-bold">35 developers</p>
-                  <p>took part in the accessibility reseearch</p>
+                  <p>took part in my accessibility research</p>
                 </li>
               </ul>
             </div>
@@ -146,6 +190,86 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+      <section aria-labelledby="work-h">
+        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-8">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <h2 id="work-h" className="text-4xl font-bold">
+              Selected work
+            </h2>
+            <Link
+              href="/projects"
+              className="text-lg underline text-petrol hover:text-petrol-dark"
+            >
+              All projects
+            </Link>
+          </div>
+          {featured.map((work, index) => (
+            <article
+              key={work.title}
+              className={`bg-surface border border-line rounded overflow-hidden flex flex-wrap ${
+                index % 2 === 1 ? "flex-row-reverse" : ""
+              }`}
+            >
+              {work.image ? (
+                <Image
+                  src={work.image}
+                  alt={work.alt ?? ""}
+                  width={1200}
+                  height={700}
+                  className="flex-1 basis-[480px] min-w-0 h-[340px] object-cover object-left-top bg-ink"
+                />
+              ) : (
+                <div className="flex-1 basis-[480px] min-w-0 h-[340px] flex items-center justify-center bg-[#eaf1f3]">
+                  <Truck
+                    aria-hidden="true"
+                    size={140}
+                    strokeWidth={1.5}
+                    className="text-petrol"
+                  />
+                </div>
+              )}
+              <div className="flex-1 basis-[380px] p-9 flex flex-col gap-4">
+                <p className="font-mono text-sm text-muted">{work.tech}</p>
+                <h3 className="text-3xl font-bold">
+                  {work.title}
+                  {work.inProgress && (
+                    <span className="ml-3 align-middle text-sm font-normal px-2.5 py-1 rounded bg-notice-bg text-notice-text">
+                      In progress
+                    </span>
+                  )}
+                </h3>
+                <p className="text-lg leading-relaxed">{work.description}</p>
+                <div className="flex flex-wrap gap-5 mt-auto text-lg">
+                  <Link
+                    href={work.caseStudy}
+                    className="font-bold underline text-petrol hover:text-petrol-dark"
+                  >
+                    Read the case study
+                  </Link>
+                  {work.github && (
+                    <ExternalLink
+                      href={work.github}
+                      className="underline text-petrol hover:text-petrol-dark"
+                    >
+                      {work.inProgress
+                        ? "Follow progress on GitHub"
+                        : "Code on GitHub"}
+                    </ExternalLink>
+                  )}
+                  {work.liveSite && (
+                    <ExternalLink
+                      href={work.liveSite}
+                      className="underline text-petrol hover:text-petrol-dark"
+                    >
+                      View live site
+                    </ExternalLink>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </>
