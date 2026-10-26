@@ -67,9 +67,9 @@ export default function Home() {
         "An accessible map of North East towns. The map and the place list stay in sync, the list gives keyboard and screen-reader users an equal alternative, and the search is covered by unit tests.",
       image: "/images/north-east-places.png",
       alt: "North East Places: a street map zoomed in on Hartlepool with its popup open, beside a search box showing 10 places found and Hartlepool highlighted in the list.",
-      caseStudy: "/projects##north-east-places",
+      caseStudy: "/projects#north-east-places",
       GitHub: "https://github.com/ifeanyiukiwe/north-east-places",
-      liveSite: "https://north-east-places.vercel.ap",
+      liveSite: "https://north-east-places.vercel.app",
     },
     {
       title: "Padfect Store",

@@ -201,11 +201,13 @@ export default function About() {
           Outside work
         </h2>
         <p className="mt-4 text-lg max-w-3xl leading-relaxed">
-          I’m a member of Rotary International (Morpeth Club). Away from the
-          screen, I love walking with my dogs, by the beach or closer to home,
-          being out in nature, spending time with my family, and playing
-          football and video games. I’ve also built websites as a volunteer,
-          including CareProNest, which helps families find carers.
+          I’m a member of Rotary International (Morpeth Club). Outside work, I
+          love history and politics, and I spend a lot of my free time visiting
+          historic places across Northumberland: the castles at Bamburgh and
+          Warkworth, Lindisfarne on Holy Island, and the harbour at Amble.
+          Closer to home, you’ll find me walking my dogs on the beach at Cambois
+          or Newbiggin-by-the-Sea, or along the River Wansbeck. I also enjoy
+          time with my family, playing football
         </p>
       </section>
     </>
