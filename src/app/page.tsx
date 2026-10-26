@@ -259,6 +259,7 @@ export default function Home() {
                     className="font-bold underline text-petrol hover:text-petrol-dark"
                   >
                     Read the case study
+                    <span className="sr-only"> for {work.title}</span>
                   </Link>
                   {work.github && (
                     <ExternalLink
@@ -268,6 +269,7 @@ export default function Home() {
                       {work.inProgress
                         ? "Follow progress on GitHub"
                         : "Code on GitHub"}
+                      <span className="sr-only"> for {work.title}</span>
                     </ExternalLink>
                   )}
                   {work.liveSite && (
@@ -276,6 +278,7 @@ export default function Home() {
                       className="underline text-petrol hover:text-petrol-dark"
                     >
                       View live site
+                      <span className="sr-only"> for {work.title}</span>
                     </ExternalLink>
                   )}
                 </div>
