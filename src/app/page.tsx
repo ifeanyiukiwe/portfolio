@@ -130,7 +130,7 @@ export default function Home() {
               download
               className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
             >
-              Download my CV (PDF, 76 KB)
+              Download my CV (PDF, 74 KB)
             </a>
           </div>
           <p>
