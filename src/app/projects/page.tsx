@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ExternalLink from "@/components/ExternalLink";
-import { text } from "stream/consumers";
 import { Truck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -180,6 +179,7 @@ export default function ProjectsPage() {
                     className="underline text-petrol hover:text-petrol-dark"
                   >
                     Code and README on GitHub
+                    <span className="sr-only"> for {study.title}</span>
                   </ExternalLink>
                 )}
                 {study.liveSite && (
@@ -188,6 +188,7 @@ export default function ProjectsPage() {
                     className="underline text-petrol hover:text-petrol-dark"
                   >
                     View live site
+                    <span className="sr-only"> for {study.title}</span>
                   </ExternalLink>
                 )}
               </div>
