@@ -67,7 +67,7 @@ export default function About() {
         <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col md:flex-row items-center gap-12">
           <div className="shrink-0">
             <Image
-              src="/images/ojo-ukiwe.jpg"
+              src="/images/ojo-ukiwe-removebg-preview.png"
               alt="Ojo Ifeanyi Ukiwe"
               width={800}
               height={1000}
