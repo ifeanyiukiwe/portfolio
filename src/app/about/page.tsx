@@ -85,7 +85,7 @@ export default function About() {
               day one and help make services more accessible.
             </p>
             <a
-              href="/cv.pdf"
+              href="/ifeanyi_ukiwe_cv.pdf"
               download
               className="self-start inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
             >

@@ -127,7 +127,7 @@ export default function Home() {
                 View my projects
               </Link>
               <a
-                href="/cv.pdf"
+                href="/ifeanyi_ukiwe_cv.pdf"
                 download
                 className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
               >
