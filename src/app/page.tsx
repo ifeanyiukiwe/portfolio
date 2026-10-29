@@ -105,46 +105,56 @@ export default function Home() {
   return (
     <>
       <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col gap-6">
-          <p className="font-mono text-sm tracking-wide text-muted">
-            FRONT-END DEVELOPER · NORTH EAST ENGLAND
-          </p>
-          <h1 className="text-5xl font-bold leading-tight max-w-[16ch]">
-            I build web applications that everyone can use.
-          </h1>
-          <p className="text-xl text-muted max-w-2xl">
-            Over five years building React and TypeScript interfaces, most of
-            them in an Agile team, an MSc in Computing from the University of
-            Sunderland, and research into how accessibility reports help
-            developers fix real problems.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-2">
-            <Link
-              href="/projects"
-              className="inline-flex items-center min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"
-            >
-              View my projects
-            </Link>
-            <a
-              href="/cv.pdf"
-              download
-              className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
-            >
-              Download my CV (PDF, 74 KB)
-            </a>
+        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col md:flex-row md:items-center gap-10">
+          <div className="flex flex-col gap-6 flex-1">
+            <p className="font-mono text-sm tracking-wide text-muted">
+              FRONT-END DEVELOPER · NORTH EAST ENGLAND
+            </p>
+            <h1 className="text-5xl font-bold leading-tight max-w-[16ch]">
+              I build web applications that everyone can use.
+            </h1>
+            <p className="text-xl text-muted max-w-2xl">
+              Over five years building React and TypeScript interfaces, most of
+              them in an Agile team, an MSc in Computing from the University of
+              Sunderland, and research into how accessibility reports help
+              developers fix real problems.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-2">
+              <Link
+                href="/projects"
+                className="inline-flex items-center min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"
+              >
+                View my projects
+              </Link>
+              <a
+                href="/cv.pdf"
+                download
+                className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
+              >
+                Download my CV (PDF, 74 KB)
+              </a>
+            </div>
+            <p>
+              <span className="border rounded px-2 py-1 text-petrol border-petrol font-mono text-sm">
+                WCAG 2.1 AA
+              </span>{" "}
+              This site is built to meet WCAG 2.1 AA.{" "}
+              <Link
+                href="/accessibility"
+                className="underline text-petrol hover:text-petrol-dark"
+              >
+                Read the accessibility statement
+              </Link>
+            </p>
           </div>
-          <p>
-            <span className="border rounded px-2 py-1 text-petrol border-petrol font-mono text-sm">
-              WCAG 2.1 AA
-            </span>{" "}
-            This site is built to meet WCAG 2.1 AA.{" "}
-            <Link
-              href="/accessibility"
-              className="underline text-petrol hover:text-petrol-dark"
-            >
-              Read the accessibility statement
-            </Link>
-          </p>
+          <Image
+            src="/images/ojo-ukiwe.jpg"
+            alt="Ojo Ifeanyi Ukiwe"
+            width={800}
+            height={1000}
+            priority
+            className="w-full max-w-[320px] h-auto rounded shrink-0 self-center md:self-auto"
+          />
         </div>
       </section>
       <section aria-labelledby="bring-h">

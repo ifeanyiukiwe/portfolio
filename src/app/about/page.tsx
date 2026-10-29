@@ -201,12 +201,12 @@ export default function About() {
           Outside work
         </h2>
         <p className="mt-4 text-lg max-w-3xl leading-relaxed">
-          Outside work, I love history, and I spend a lot of my free time
-          visiting historic places across Northumberland: the castles at
-          Bamburgh and Warkworth, Lindisfarne on Holy Island, and the harbour at
-          Amble. Closer to home, you’ll find me walking my dogs on the beach at
-          Cambois or Newbiggin-by-the-Sea, or along the River Wansbeck. I also
-          enjoy time with my family, playing football.
+          Outside work, I love history, and spend a lot of my free time visiting
+          historic places across Northumberland: the castles at Bamburgh and
+          Warkworth, Lindisfarne on Holy Island, and the harbour at Amble.
+          Closer to home, you’ll find me walking my dogs on the beach at Cambois
+          or Newbiggin-by-the-Sea, or along the River Wansbeck. I also enjoy
+          time with my family, playing football.
         </p>
       </section>
     </>

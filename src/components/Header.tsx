@@ -11,7 +11,7 @@ const links = [
 export default function Header() {
   const pathname = usePathname();
   return (
-    <header className="bg-surface border-b border-line">
+    <header className="bg-surface border-b border-line ">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
         <Link href="/" className="font-bold text-xl text-ink no-underline">
           Ojo Ifeanyi Ukiwe
