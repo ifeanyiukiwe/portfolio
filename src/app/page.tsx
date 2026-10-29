@@ -148,7 +148,7 @@ export default function Home() {
             </p>
           </div>
           <Image
-            src="/images/ojo-ukiwe.jpg"
+            src="/images/ojo-ukiwe-removebg-preview.png"
             alt="Ojo Ifeanyi Ukiwe"
             width={800}
             height={1000}
@@ -338,7 +338,7 @@ export default function Home() {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                href="mailto:duio1541@gmail.com"
+                href="mailto:info@ifeanyiukiwe.com"
                 className="inline-flex items-center min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"
               >
                 Email me

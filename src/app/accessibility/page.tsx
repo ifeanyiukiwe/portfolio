@@ -141,12 +141,12 @@ export default function AccessibilityPage() {
             If something on this site doesn’t work for you, or you need
             information in a different format, please email me{" "}
             <span className="underline text-petrol font-italic">
-              duio1541@gmail.com
+              info@ifeanyiukiwe.com
             </span>{" "}
             and I’ll reply within 5 working days.
           </p>
           <a
-            href="mailto:duio1541@gmail.com"
+            href="mailto:info@ifeanyiukiwe.com"
             className="inline-flex items-center min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"
           >
             Email me

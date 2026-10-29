@@ -17,7 +17,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="mailto:duio1541@gmail.com"
+                href="mailto:info@ifeanyiukiwe.com"
                 className="underline hover:text-petrol-dark"
               >
                 Email me
