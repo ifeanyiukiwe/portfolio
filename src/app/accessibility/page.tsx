@@ -140,9 +140,12 @@ export default function AccessibilityPage() {
           <p className="max-w-3xl text-lg">
             If something on this site doesn’t work for you, or you need
             information in a different format, please email me{" "}
-            <span className="underline text-petrol font-italic">
+            <a
+              href="mailto:info@ifeanyiukiwe.com"
+              className="underline text-petrol hover:text-petrol-dark"
+            >
               info@ifeanyiukiwe.com
-            </span>{" "}
+            </a>{" "}
             and I’ll reply within 5 working days.
           </p>
           <a
