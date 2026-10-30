@@ -56,7 +56,7 @@ const caseStudies: CaseStudy[] = [
       "An interactive map of towns across North East England, with a searchable list beside it. Selecting a place in the list flies the map to it, and clicking a marker highlights it in the list.",
     github: "https://github.com/ifeanyiukiwe/north-east-places",
     liveSite: "https://north-east-places.vercel.app",
-    image: "/images/north-east-places.png",
+    image: "/images/north-east-places2.png",
     alt: "North East Places: a street map zoomed in on Hartlepool with its popup open, beside a search box showing 10 places found and Hartlepool highlighted in the list.",
     problem:
       "Interactive maps are hard or impossible to use with a keyboard or a screen reader, so the information on them is often out of reach for the people who need it most.",
@@ -74,7 +74,7 @@ const caseStudies: CaseStudy[] = [
     summary:
       "My highest-scoring MSc project: an online shop where gamers can browse and buy gaming accessories, with customer accounts, live search, a cart, checkout and an admin dashboard for managing orders.",
     github: "https://github.com/ifeanyiukiwe/msc-ecommerce",
-    image: "/images/ecommerce.png", // CHECK: use your new file name if you renamed it
+    image: "/images/e-commerce.png",
     alt: 'Padfect Store home page: a purple navigation bar with Home, Product, Cart, Search, Contact, Resources, Login and Admin links, above a photo of a white game controller on a bowl of tortilla chips, with the heading "Everything Game", the tagline "Fascinating. Fun. Affordable." and a Shop Now button.',
     problem:
       "Gamers needed one place to find accessories, compare them and buy them, and the shop needed a simple way to manage orders.",

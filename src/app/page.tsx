@@ -65,7 +65,7 @@ export default function Home() {
       tech: "SvelteKit · TypeScript · MapLibre GL JS · Vitest",
       description:
         "An accessible map of North East towns. The map and the place list stay in sync, the list gives keyboard and screen-reader users an equal alternative, and the search is covered by unit tests.",
-      image: "/images/north-east-places.png",
+      image: "/images/north-east-places1.png",
       alt: "North East Places: a street map zoomed in on Hartlepool with its popup open, beside a search box showing 10 places found and Hartlepool highlighted in the list.",
       caseStudy: "/projects#north-east-places",
       GitHub: "https://github.com/ifeanyiukiwe/north-east-places",
@@ -76,8 +76,8 @@ export default function Home() {
       tech: "PHP · MySQL · JavaScript · HTML · CSS",
       description:
         "My highest-scoring MSc project: a full PHP shop with secure login, product search, cart, checkout and an admin dashboard for orders.",
-      image: "/images/ecommerce.png",
-      alt: "GPadfect Store home page: a purple navigation bar with Home, Product, Cart, Search, Contact, Resources, Login and Admin links, above a photo of a white game controller on a bowl of tortilla chips, with the heading “Everything Game”, the tagline “Fascinating. Fun. Affordable.” and a Shop Now button.",
+      image: "/images/e-commerce.png",
+      alt: "Padfect Store home page: a purple navigation bar with Home, Product, Cart, Search, Contact, Resources, Login and Admin links, above a photo of a white game controller on a bowl of tortilla chips, with the heading “Everything Game”, the tagline “Fascinating. Fun. Affordable.” and a Shop Now button.",
       caseStudy: "/projects#padfect",
       github: "https://github.com/ifeanyiukiwe/msc-ecommerce",
     },
@@ -86,7 +86,7 @@ export default function Home() {
       tech: "React · Node.js · Express · MongoDB",
       description:
         "A booking platform I built and launched for a local beauty business: a five-step booking journey, a REST API that checks for overlapping appointments, and a secure admin area.",
-      image: "/images/infinisculpt.png",
+      image: "/images/infinisculpt1.png",
       alt: "Infinisculpt home page: a navigation bar with the IS Sculpt logo, a 24-hour badge and Book, Express, Gallery and Find Us links, above a large nail-polish bottle image with the heading “Enhance Your Natural Beauty”, the line “Premium nail, lash and beauty treatments tailored just for you” and a Book Now button.",
       caseStudy: "/projects#infinisculpt",
       liveSite: "https://infinisculpt.com",
