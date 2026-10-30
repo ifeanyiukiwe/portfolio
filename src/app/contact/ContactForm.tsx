@@ -96,6 +96,16 @@ export default function ContactForm() {
           />
         </div>
 
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="company">Company</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
         <button
           type="submit"
           className="inline-flex self-start items-center cursor-pointer min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"

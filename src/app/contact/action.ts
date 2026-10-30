@@ -15,6 +15,7 @@ export async function sendMessage(
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
+  const company = String(formData.get("company") ?? "").trim();
   // 2. Build an errors object:
 
   //    - name empty → "Enter your name"
@@ -36,9 +37,12 @@ export async function sendMessage(
     errors.message = "Your message must be 5,000 characters or fewer";
   }
 
-  // 3. If errors has any keys → return { status: "error", errors }
-
+  if (company !== "") {
+    return { status: "success" };
+  }
   if (Object.keys(errors).length > 0) {
+    // 3. If errors has any keys → return { status: "error", errors }
+
     return { status: "error", errors, values: { name, email, message } };
   }
   // 4. Create the transporter with nodemailer.createTransport({
