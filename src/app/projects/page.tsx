@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ExternalLink from "@/components/ExternalLink";
-import { Truck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Projects | Ojo Ifeanyi Ukiwe",
 };
 
 const sections = [
+  { id: "redaction-assistant", label: "Redaction Assistant" },
   { id: "webaudit", label: "WebAudit" },
   { id: "north-east-places", label: "North East Places" },
   { id: "padfect", label: "Padfect Store" },
   { id: "infinisculpt", label: "Infinisculpt" },
-  { id: "foodash", label: "Foodash" },
 ];
 type CaseStudy = {
   id: string;
@@ -29,6 +28,27 @@ type CaseStudy = {
   learnt: string;
 };
 const caseStudies: CaseStudy[] = [
+  {
+    id: "redaction-assistant",
+    title: "Redaction Assistant: finding personal data before release",
+    stack:
+      "Python · FastAPI · Pydantic · pytest · Next.js · TypeScript · Tailwind CSS · GitHub Actions · Render · Vercel",
+    summary:
+      "A tool that highlights email addresses, UK postcodes and phone numbers in a document, so a caseworker can accept or reject each suggestion before the redacted text is produced.",
+    github: "https://github.com/ifeanyiukiwe/redaction-assistant",
+    liveSite: "https://redaction-assistant.vercel.app",
+    image: "/images/redaction-tool.png",
+    alt: "Redaction Assistant review screen: a sample document with an email address, a postcode and a phone number highlighted, beside a review list where each item has Accept and Reject buttons, and the redacted text shown underneath.",
+    problem:
+      "Organisations that release documents must remove personal data first. Doing it by hand is slow, and missing one detail can mean a data breach.",
+    built:
+      "A FastAPI service that detects personal data and returns where each item appears, and a Next.js review screen where the caseworker accepts or rejects every suggestion. It has 18 automated tests (14 unit, 4 API), run by GitHub Actions on every push, and is deployed on Render and Vercel.",
+    decision:
+      "I chose rules-based detection over machine learning, so every result can be explained and tested, and I made sure a person makes every redaction decision. The tool stores no documents or personal data, and the allowed origins are set through environment variables rather than hard-coded.",
+    // CHECK: rewrite this in your own words. You'll be asked about it at interview.
+    learnt:
+      "Writing each test before the code changed how I work: I now think about what could go wrong before I build anything. Finding my own postcode in the public test data also taught me to treat every repository as public from the first commit.",
+  },
   {
     id: "webaudit",
     title: "WebAudit: accessibility auditing tool",
@@ -105,23 +125,6 @@ const caseStudies: CaseStudy[] = [
     learnt:
       "Working for a real client taught me to turn their needs into features and to keep the booking journey simple for customers on their phones.",
   },
-  {
-    id: "foodash",
-    title: "Foodash: delivery app for corner shops (in progress)",
-    stack: "Next.js · TypeScript · Tailwind CSS · Jest · GitHub Actions",
-    summary:
-      "A delivery app for local corner shops, which I'm building the way a professional team would: planned on a Jira board, with unit tests and a CI pipeline from the start.",
-    github: "https://github.com/ifeanyiukiwe/fooddash",
-    problem:
-      "Local corner shops rarely have a simple way to take orders for delivery, so customers go to larger chains instead.",
-    built:
-      "So far: postcode validation covered by Jest unit tests, and a GitHub Actions pipeline with branch protection and preview deployments.",
-    decision:
-      "I set up testing and continuous integration before building features, so every change is checked automatically from the first commit.",
-    // CHECK: what have you learnt so far? Write it in your own words.
-    learnt:
-      "Planning work in sprints on a Jira board has helped me break a large app into small, testable pieces.",
-  },
 ];
 
 export default function ProjectsPage() {
@@ -192,7 +195,7 @@ export default function ProjectsPage() {
                   </ExternalLink>
                 )}
               </div>
-              {study.image ? (
+              {study.image && (
                 <Image
                   src={study.image}
                   alt={study.alt ?? ""}
@@ -200,15 +203,6 @@ export default function ProjectsPage() {
                   height={700}
                   className="w-full h-auto rounded border border-line"
                 />
-              ) : (
-                <div className="h-[240px] flex items-center justify-center rounded border border-line bg-[#eaf1f3]">
-                  <Truck
-                    aria-hidden="true"
-                    size={120}
-                    strokeWidth={1.5}
-                    className="text-petrol"
-                  />
-                </div>
               )}
               <div className="grid gap-8 md:grid-cols-2">
                 {blocks.map((block) => (

@@ -3,6 +3,11 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About | Ojo Ifeanyi Ukiwe",
 };
+type Stage = {
+  title: string;
+  text: string;
+  period: string;
+};
 const tools = [
   {
     title: "Frontend",
@@ -26,18 +31,31 @@ const tools = [
   },
 ];
 
-const stages = [
+const stages: Stage[] = [
   {
-    title: "Starting in IT support",
-    text: "I began in IT support and administration, where I automated recurring reports with Excel VBA and cut the time they took by 80%. It taught me to look for the repetitive problem behind the everyday one.",
+    period: "2015",
+    title: "Economics: learning to think with evidence",
+    text: "My first degree, a BSc in Economics, taught me to work with data, test assumptions and think about how decisions affect real people. I still use that habit when I decide what to build and why.",
   },
   {
+    period: "2017–2021",
+    title: "Solving everyday problems with technology",
+    text: "In my first roles I supported colleagues with IT and helped a business that ran on paper records move to digital ones. I taught myself Excel VBA to automate recurring reports and cut the time they took by 80%. That was when I realised I wanted to build software, not just use it.",
+  },
+  {
+    period: "2021–2025",
     title: "Front-end developer",
-    text: "I spent almost five years building production web applications in React and TypeScript in an Agile team with designers, back-end developers and project managers. I turned designs into accessible components, integrated REST APIs, helped cut an e-commerce platform’s page-load time by 60%, and mentored junior developers in debugging and Git.",
+    text: "At Exagorazo Global Ventures I built websites and web applications in an Agile team with designers, back-end developers and project managers, working in HTML, CSS, JavaScript, React, TypeScript and Tailwind CSS. I turned designs into responsive, accessible components, integrated REST APIs, helped cut an e-commerce platform's page-load time by 60%, and mentored junior developers in our team.",
   },
   {
-    title: "MSc and research",
-    text: "I moved to the UK to study for an MSc in Computing at the University of Sunderland. For my dissertation I built WebAudit and ran a controlled experiment with 35 developers on how the format of an accessibility report affects what they fix.",
+    period: "2025–2026",
+    title: "MSc Computing and research",
+    text: "I moved to the UK to study for an MSc in Computing at the University of Sunderland, to grow from front-end into full-stack development. My web development work scored 80%, the highest in my class, and my e-commerce platform was my highest-scoring project. For my dissertation I built WebAudit and ran a controlled experiment with 35 developers on how accessibility reports affect what they fix.",
+  },
+  {
+    period: "Now",
+    title: "Building with purpose",
+    text: "I'm building full-stack tools that are tested from the first line, such as a redaction assistant that helps caseworkers protect personal data. I volunteer my skills, with a booking platform for a local business and CareProNest for carers, and I'm a member of Rotary International in Morpeth. My long-term aim is to build assistive technology that makes everyday life easier for people with disabilities.",
   },
 ];
 
@@ -141,6 +159,7 @@ export default function About() {
               <p className="mt-2 text-muted max-w-3xl leading-relaxed">
                 {stage.text}
               </p>
+              <p className="font-mono text-sm text-muted">{stage.period}</p>
             </li>
           ))}
         </ol>

@@ -1,8 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import ExternalLink from "@/components/ExternalLink";
-import { Truck } from "lucide-react";
 export default function Home() {
+  type FeaturedWork = {
+    title: string;
+    tech: string;
+    description: string;
+    image?: string;
+    mobileImage?: string;
+    alt?: string;
+    caseStudy: string;
+    github?: string;
+    liveSite?: string;
+    inProgress?: boolean;
+  };
   const stack = [
     {
       title: "Front end",
@@ -33,6 +44,7 @@ export default function Home() {
         "PHP",
         "Node.js and Express",
         "REST APIs",
+        "Python",
         "MySQL",
         "PostgreSQL",
         "MongoDB",
@@ -49,7 +61,19 @@ export default function Home() {
       ],
     },
   ];
-  const featured = [
+  const featured: FeaturedWork[] = [
+    {
+      title: "Redaction Assistant",
+      tech: "Python · FastAPI · pytest · Next.js · TypeScript · Tailwind · GitHub Actions",
+      description:
+        "A tool that helps caseworkers find personal data in documents and review every suggestion before release, built test-first with CI on every push.",
+      image: "/images/rs.png",
+      mobileImage: "/images/redaction-assistant-1.png",
+      alt: "Redaction Assistant after a search: 3 possible items of personal data found in a sample document. The phone number and email address have been accepted and blacked out, the postcode has been rejected, and the redacted text is shown underneath with a Copy button.",
+      caseStudy: "/projects#redaction-assistant",
+      github: "https://github.com/ifeanyiukiwe/redaction-assistant",
+      liveSite: "https://redaction-assistant.vercel.app",
+    },
     {
       title: "WebAudit",
       tech: "PHP 8.2 · MySQL · JavaScript · Chart.js",
@@ -68,7 +92,7 @@ export default function Home() {
       image: "/images/north-east-places1.png",
       alt: "North East Places: a street map zoomed in on Hartlepool with its popup open, beside a search box showing 10 places found and Hartlepool highlighted in the list.",
       caseStudy: "/projects#north-east-places",
-      GitHub: "https://github.com/ifeanyiukiwe/north-east-places",
+      github: "https://github.com/ifeanyiukiwe/north-east-places",
       liveSite: "https://north-east-places.vercel.app",
     },
     {
@@ -91,16 +115,6 @@ export default function Home() {
       caseStudy: "/projects#infinisculpt",
       liveSite: "https://infinisculpt.com",
     },
-
-    {
-      title: "Foodash",
-      tech: "Next.js · TypeScript · Tailwind · Jest · GitHub Actions",
-      description:
-        "A delivery app for local corner shops, built the way a team would: planned on a Jira board, with unit tests and a CI pipeline from day one.",
-      caseStudy: "/projects#foodash",
-      github: "https://github.com/ifeanyiukiwe/fooddash",
-      inProgress: true,
-    },
   ];
   return (
     <>
@@ -114,9 +128,9 @@ export default function Home() {
               I build web applications that everyone can use.
             </h1>
             <p className="text-xl text-muted max-w-2xl">
-              Over five years building React and TypeScript interfaces, most of
-              them in an Agile team, an MSc in Computing from the University of
-              Sunderland, and research into how accessibility reports help
+              Almost five years building React and TypeScript interfaces, most
+              of them in an Agile team, an MSc in Computing from the University
+              of Sunderland, and research into how accessibility reports help
               developers fix real problems.
             </p>
             <div className="flex flex-wrap gap-4 mt-2">
@@ -170,7 +184,7 @@ export default function Home() {
               <ul className="flex flex-col gap-7">
                 <li>
                   <p className="text-6xl font-bold leading-none mb-2">
-                    5+ years
+                    5 years
                   </p>
                   <p>
                     building web applications with React and TypeScript
@@ -234,21 +248,25 @@ export default function Home() {
                 index % 2 === 1 ? "flex-row-reverse" : ""
               }`}
             >
-              {work.image ? (
-                <Image
-                  src={work.image}
-                  alt={work.alt ?? ""}
-                  width={1200}
-                  height={700}
-                  className="flex-1 basis-[480px] min-w-0 h-[340px] object-cover object-left-top bg-ink"
-                />
-              ) : (
-                <div className="flex-1 basis-[480px] min-w-0 h-[340px] flex items-center justify-center bg-[#eaf1f3]">
-                  <Truck
-                    aria-hidden="true"
-                    size={140}
-                    strokeWidth={1.5}
-                    className="text-petrol"
+              {work.image && (
+                <div className="flex-1 basis-[480px] min-w-0 bg-ink">
+                  {work.mobileImage && (
+                    <Image
+                      src={work.mobileImage}
+                      alt={work.alt ?? ""}
+                      width={548}
+                      height={740}
+                      className="w-full h-auto md:hidden"
+                    />
+                  )}
+                  <Image
+                    src={work.image}
+                    alt={work.alt ?? ""}
+                    width={1200}
+                    height={700}
+                    className={`w-full h-[340px] object-cover object-left-top ${
+                      work.mobileImage ? "hidden md:block" : ""
+                    }`}
                   />
                 </div>
               )}
