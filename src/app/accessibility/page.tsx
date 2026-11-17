@@ -6,7 +6,7 @@ export default function AccessibilityPage() {
   return (
     <>
       <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col gap-6">
+        <div className="container-page py-20 flex flex-col gap-6">
           <h1 className="text-4xl md:text-5xl font-bold">
             Accessibility statement
           </h1>
@@ -17,7 +17,7 @@ export default function AccessibilityPage() {
           </p>
         </div>
       </section>
-      <div className="mx-auto max-w-6xl px-5 py-16 flex flex-col gap-14">
+      <div className="container-page py-16 flex flex-col gap-14">
         <section aria-labelledby="use-h" className="flex flex-col gap-4">
           <h2 className="text-3xl font-bold" id="use-h">
             How you can use this website

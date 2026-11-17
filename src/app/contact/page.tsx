@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col gap-6">
+        <div className="container-page py-20 flex flex-col gap-6">
           <h1 className="text-4xl md:text-5xl font-bold">Contact</h1>
           <p className="text-xl text-muted max-w-2xl">
             I’m looking for a front-end or full-stack developer role in North

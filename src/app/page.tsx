@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ExternalLink from "@/components/ExternalLink";
+import PageHero from "@/components/PageHero";
 export default function Home() {
   type FeaturedWork = {
     title: string;
@@ -14,6 +15,7 @@ export default function Home() {
     liveSite?: string;
     inProgress?: boolean;
   };
+  const heroSkills = ["React", "TypeScript", "Next.js", "WCAG 2.1 AA"];
   const stack = [
     {
       title: "Front end",
@@ -118,61 +120,55 @@ export default function Home() {
   ];
   return (
     <>
-      <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col md:flex-row md:items-center gap-10">
-          <div className="flex flex-col gap-6 flex-1">
-            <p className="font-mono text-sm tracking-wide text-muted">
-              FRONT-END DEVELOPER · NORTH EAST ENGLAND
-            </p>
-            <h1 className="text-5xl font-bold leading-tight max-w-[16ch]">
-              I build web applications that everyone can use.
-            </h1>
-            <p className="text-xl text-muted max-w-2xl">
-              Almost five years building React and TypeScript interfaces, most
-              of them in an Agile team, an MSc in Computing from the University
-              of Sunderland, and research into how accessibility reports help
-              developers fix real problems.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-2">
-              <Link
-                href="/projects"
-                className="inline-flex items-center min-h-12 px-6 rounded bg-petrol text-white font-bold no-underline shadow-[0_3px_0_var(--color-petrol-shadow)] hover:bg-petrol-dark"
-              >
-                View my projects
-              </Link>
-              <a
-                href="/ifeanyi_ukiwe_cv.pdf"
-                download
-                className="inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
-              >
-                Download my CV (PDF, 74 KB)
-              </a>
-            </div>
-            <p>
-              <span className="border rounded px-2 py-1 text-petrol border-petrol font-mono text-sm">
-                WCAG 2.1 AA
-              </span>{" "}
-              This site is built to meet WCAG 2.1 AA.{" "}
-              <Link
-                href="/accessibility"
-                className="underline text-petrol hover:text-petrol-dark"
-              >
-                Read the accessibility statement
-              </Link>
-            </p>
-          </div>
-          <Image
-            src="/images/ojo-ukiwe-removebg-preview.png"
-            alt="Ojo Ifeanyi Ukiwe"
-            width={800}
-            height={1000}
-            priority
-            className="w-full max-w-[320px] h-auto rounded shrink-0 self-center md:self-auto"
-          />
+      <PageHero
+        eyebrow="FRONT-END DEVELOPER · NORTH EAST ENGLAND"
+        title="I build web applications that everyone can use."
+        intro="Almost five years building React and TypeScript interfaces, most of them in an Agile team, an MSc in Computing from the University of Sunderland, and research into how accessibility reports help developers fix real problems."
+        image={{
+          src: "/images/ojo-ukiwe-removebg-preview.png",
+          alt: "Ojo Ifeanyi Ukiwe",
+        }}
+      >
+        <div className="mt-2 flex flex-wrap gap-4">
+          <Link
+            href="/projects"
+            className="inline-flex min-h-12 items-center rounded bg-white px-6 font-bold text-petrol-deep no-underline shadow-[0_3px_0_#0f2c36] hover:bg-page"
+          >
+            View my projects
+          </Link>
+          <a
+            href="/ifeanyi_ukiwe_cv.pdf"
+            download
+            className="inline-flex min-h-12 items-center rounded border-2 border-white px-6 font-bold text-white no-underline hover:bg-white hover:text-petrol-deep"
+          >
+            Download my CV (PDF, 74 KB)
+          </a>
         </div>
-      </section>
+
+        <ul aria-label="Key skills" className="flex flex-wrap gap-2">
+          {heroSkills.map((skill) => (
+            <li
+              key={skill}
+              className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm text-white"
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+
+        <p className="text-white/85">
+          This site is built to meet WCAG 2.1 AA.{" "}
+          <Link
+            href="/accessibility"
+            className="text-white underline hover:text-white/80"
+          >
+            Read the accessibility statement
+          </Link>
+        </p>
+      </PageHero>
+
       <section aria-labelledby="bring-h">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-8">
+        <div className="container-page py-18 flex flex-col gap-8">
           <h2 id="bring-h" className="text-4xl font-bold">
             What I bring
           </h2>
@@ -229,7 +225,7 @@ export default function Home() {
         </div>
       </section>
       <section aria-labelledby="work-h">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-8">
+        <div className="container-page py-18 flex flex-col gap-8">
           <div className="flex flex-wrap items-baseline justify-between gap-3">
             <h2 id="work-h" className="text-4xl font-bold">
               Selected work
@@ -319,7 +315,7 @@ export default function Home() {
         aria-labelledby="research-h"
         className="bg-petrol-deep text-white"
       >
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-wrap gap-10 items-start">
+        <div className="container-page py-18 flex flex-wrap gap-10 items-start">
           <div className="flex-1 basis-[420px] flex flex-col gap-4">
             <p className="font-mono text-sm tracking-wide text-[#cde5e4]">
               MSC RESEARCH
@@ -345,7 +341,7 @@ export default function Home() {
         </div>
       </section>
       <section id="contact" aria-labelledby="contact-h">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-6">
+        <div className="container-page py-18 flex flex-col gap-6">
           <h2 id="contact-h" className="text-4xl font-bold">
             Get in touch
           </h2>

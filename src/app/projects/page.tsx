@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ExternalLink from "@/components/ExternalLink";
+import PageHero from "@/components/PageHero";
+import { ArrowDown } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Projects | Ojo Ifeanyi Ukiwe",
@@ -130,32 +132,29 @@ const caseStudies: CaseStudy[] = [
 export default function ProjectsPage() {
   return (
     <>
-      <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col gap-6">
-          <h1 className="text-4xl md:text-5xl font-bold">Projects</h1>
-          <p className="text-xl text-muted max-w-2xl">
-            Projects I’ve designed and built myself, from an accessibility
-            auditing tool that became my MSc research to a tested SvelteKit map
-            application. Each case study covers the problem, what I built, a
-            decision I made and what I learnt.
-          </p>
-          <nav aria-label="On this page">
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              {sections.map((section) => (
-                <li key={section.id}>
-                  <a
-                    href={`#${section.id}`}
-                    className="text-petrol underline hover:text-petrol-dark"
-                  >
-                    {section.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </section>
-      <div className="mx-auto max-w-6xl px-5 py-16 flex flex-col gap-14">
+      <PageHero
+        eyebrow="CASE STUDIES · 5 PROJECTS"
+        title="Projects I've designed and built"
+        intro="From an accessibility auditing tool that became my MSc research to a tested SvelteKit map application. Each case study covers the problem, what I built, a decision I made and what I learnt."
+      >
+        <nav aria-label="On this page">
+          <ul className="flex flex-wrap gap-2">
+            {sections.map((section) => (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-white no-underline hover:bg-white hover:text-petrol-deep"
+                >
+                  {section.label}
+                  <ArrowDown className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </PageHero>
+
+      <div className="container-page py-16 flex flex-col gap-14">
         {caseStudies.map((study) => {
           const blocks = [
             { heading: "The problem", text: study.problem },
@@ -168,7 +167,7 @@ export default function ProjectsPage() {
               key={study.id}
               id={study.id}
               aria-labelledby={`${study.id}-heading`}
-              className="bg-surface border border-line rounded p-8 flex flex-col gap-6"
+              className="scroll-mt-28 bg-surface border border-line rounded p-8 flex flex-col gap-6"
             >
               <p className="font-mono text-sm text-muted">{study.stack}</p>
               <h2 id={`${study.id}-heading`} className="text-3xl font-bold">
