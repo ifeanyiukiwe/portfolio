@@ -82,7 +82,7 @@ export default function About() {
   return (
     <>
       <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col md:flex-row items-center gap-12">
+        <div className="container-page py-20 flex flex-col md:flex-row items-center gap-12">
           <div className="shrink-0">
             <Image
               src="/images/ojo-ukiwe-removebg-preview.png"
@@ -113,7 +113,7 @@ export default function About() {
         </div>
       </section>
       <section aria-labelledby="why-h" className="bg-petrol-deep text-white">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-wrap gap-10 items-start">
+        <div className="container-page py-18 flex flex-wrap gap-10 items-start">
           <div className="flex flex-col gap-1">
             <p className="font-mono text-sm tracking-wide uppercase">
               MSc research
@@ -145,10 +145,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section
-        aria-labelledby="growth-h"
-        className="mx-auto max-w-6xl px-5 py-16"
-      >
+      <section aria-labelledby="growth-h" className="container-page py-16">
         <h2 id="growth-h" className="text-3xl font-bold">
           How I’ve grown
         </h2>
@@ -164,10 +161,7 @@ export default function About() {
           ))}
         </ol>
       </section>
-      <section
-        aria-labelledby="work-h"
-        className="mx-auto max-w-6xl px-5 py-16"
-      >
+      <section aria-labelledby="work-h" className="container-page py-16">
         <h2 id="work-h" className="text-3xl font-bold">
           How I work
         </h2>
@@ -183,10 +177,7 @@ export default function About() {
           ))}
         </div>
       </section>
-      <section
-        aria-labelledby="tools-h"
-        className="mx-auto max-w-6xl px-5 py-16"
-      >
+      <section aria-labelledby="tools-h" className="container-page py-16">
         <h2 id="tools-h" className="text-3xl font-bold">
           What I work with
         </h2>
@@ -202,10 +193,7 @@ export default function About() {
           ))}
         </div>
       </section>
-      <section
-        aria-labelledby="ahead-h"
-        className="mx-auto max-w-6xl px-5 py-16"
-      >
+      <section aria-labelledby="ahead-h" className="container-page py-16">
         <h2 id="ahead-h" className="text-3xl font-bold">
           Looking ahead
         </h2>
@@ -215,7 +203,7 @@ export default function About() {
           make life easier for the people who need it most.
         </p>
       </section>
-      <section aria-labelledby="fun-h" className="mx-auto max-w-6xl px-5 py-16">
+      <section aria-labelledby="fun-h" className="container-page py-16">
         <h2 id="fun-h" className="text-3xl font-bold">
           Outside work
         </h2>

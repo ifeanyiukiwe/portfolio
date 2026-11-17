@@ -131,7 +131,7 @@ export default function ProjectsPage() {
   return (
     <>
       <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col gap-6">
+        <div className="container-page py-20 flex flex-col gap-6">
           <h1 className="text-4xl md:text-5xl font-bold">Projects</h1>
           <p className="text-xl text-muted max-w-2xl">
             Projects I’ve designed and built myself, from an accessibility
@@ -155,7 +155,7 @@ export default function ProjectsPage() {
           </nav>
         </div>
       </section>
-      <div className="mx-auto max-w-6xl px-5 py-16 flex flex-col gap-14">
+      <div className="container-page py-16 flex flex-col gap-14">
         {caseStudies.map((study) => {
           const blocks = [
             { heading: "The problem", text: study.problem },
