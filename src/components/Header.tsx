@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-20">
+      <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
         {/* Logo: monogram + name */}
         <Link
           href="/"
@@ -104,7 +104,7 @@ export default function Header() {
           id="mobile-menu"
           className="absolute inset-x-0 top-full border-b border-line bg-surface shadow-lg lg:hidden"
         >
-          <nav aria-label="Mobile" className="mx-auto max-w-6xl px-5 py-4">
+          <nav aria-label="Mobile" className="container-page py-4">
             <ul className="flex flex-col">
               {mobileLinks.map((link) => {
                 const current = isCurrent(link.href);

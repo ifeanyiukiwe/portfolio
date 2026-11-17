@@ -119,7 +119,7 @@ export default function Home() {
   return (
     <>
       <section className="bg-surface border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20 flex flex-col md:flex-row md:items-center gap-10">
+        <div className="container-page py-20 flex flex-col md:flex-row md:items-center gap-10">
           <div className="flex flex-col gap-6 flex-1">
             <p className="font-mono text-sm tracking-wide text-muted">
               FRONT-END DEVELOPER · NORTH EAST ENGLAND
@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
       <section aria-labelledby="bring-h">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-8">
+        <div className="container-page py-18 flex flex-col gap-8">
           <h2 id="bring-h" className="text-4xl font-bold">
             What I bring
           </h2>
@@ -229,7 +229,7 @@ export default function Home() {
         </div>
       </section>
       <section aria-labelledby="work-h">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-8">
+        <div className="container-page py-18 flex flex-col gap-8">
           <div className="flex flex-wrap items-baseline justify-between gap-3">
             <h2 id="work-h" className="text-4xl font-bold">
               Selected work
@@ -319,7 +319,7 @@ export default function Home() {
         aria-labelledby="research-h"
         className="bg-petrol-deep text-white"
       >
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-wrap gap-10 items-start">
+        <div className="container-page py-18 flex flex-wrap gap-10 items-start">
           <div className="flex-1 basis-[420px] flex flex-col gap-4">
             <p className="font-mono text-sm tracking-wide text-[#cde5e4]">
               MSC RESEARCH
@@ -345,7 +345,7 @@ export default function Home() {
         </div>
       </section>
       <section id="contact" aria-labelledby="contact-h">
-        <div className="mx-auto max-w-6xl px-5 py-18 flex flex-col gap-6">
+        <div className="container-page py-18 flex flex-col gap-6">
           <h2 id="contact-h" className="text-4xl font-bold">
             Get in touch
           </h2>
