@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "About | Ojo Ifeanyi Ukiwe",
 };
@@ -78,42 +79,47 @@ const strengths = [
   },
 ];
 
+const quickFacts = [
+  "Based in Northumberland",
+  "MSc Computing (Distinction)",
+  "Accessibility specialist",
+  "Open to work",
+];
+
 export default function About() {
   return (
     <>
-      <section className="bg-surface border-b border-line">
-        <div className="container-page py-20 flex flex-col md:flex-row items-center gap-12">
-          <div className="shrink-0">
-            <Image
-              src="/images/ojo-ukiwe-removebg-preview.png"
-              alt="Ojo Ifeanyi Ukiwe"
-              width={800}
-              height={1000}
-              priority
-              className="w-full max-w-[280px] h-auto rounded"
-            />
-          </div>
-          <div className="text-left flex flex-col gap-5">
-            <h1 className="text-4xl md:text-5xl font-bold">About me</h1>
-            <p className="text-xl text-muted max-w-2xl">
-              I’m a front-end developer in Northumberland. I care about building
-              software that works for everyone, including people who use a
-              keyboard, a screen reader or a magnifier. I’m looking for a role
-              in a development team where I can keep learning, contribute from
-              day one and help make services more accessible.
-            </p>
-            <a
-              href="/ifeanyi_ukiwe_cv.pdf"
-              download
-              className="self-start inline-flex items-center min-h-12 px-6 rounded border-2 border-ink text-ink font-bold no-underline hover:bg-petrol-dark hover:border-petrol-dark hover:text-white"
+      <PageHero
+        eyebrow="ABOUT ME"
+        title="Front-end developer, accessibility first"
+        intro="I'm a front-end developer in Northumberland. I care about building software that works for everyone, including people who use a keyboard, a screen reader or a magnifier. I'm looking for a role in a development team where I can keep learning, contribute from day one and help make services more accessible."
+        image={{
+          src: "/images/ojo-ukiwe-removebg-preview.png",
+          alt: "Ojo Ifeanyi Ukiwe",
+        }}
+      >
+        <ul aria-label="Quick facts" className="flex flex-wrap gap-2">
+          {quickFacts.map((fact) => (
+            <li
+              key={fact}
+              className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm text-white"
             >
-              Download my CV (PDF, 74 KB)
-            </a>
-          </div>
-        </div>
-      </section>
+              {fact}
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="/ifeanyi_ukiwe_cv.pdf"
+          download
+          className="mt-2 inline-flex min-h-12 items-center self-start rounded bg-white px-6 font-bold text-petrol-deep no-underline shadow-[0_3px_0_#0f2c36] hover:bg-page"
+        >
+          Download my CV (PDF, 74 KB)
+        </a>
+      </PageHero>
+
       <section aria-labelledby="why-h" className="bg-petrol-deep text-white">
-        <div className="container-page py-18 flex flex-wrap gap-10 items-start">
+        <div className="container-page mt-16 py-18 flex flex-wrap gap-10 items-start">
           <div className="flex flex-col gap-1">
             <p className="font-mono text-sm tracking-wide uppercase">
               MSc research
